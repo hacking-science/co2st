@@ -1,0 +1,57 @@
+@import 'reset';
+@import 'base';
+
+// --------------------
+// Nuxt
+// --------------------
+.page-active {
+  transition: all ease-in-out 0.3s;
+}
+.page-leave-active {
+  transition: all ease-in-out 0.3s;
+}
+.page-enter {
+  transform: translate3d(-500px,0,0);
+}
+.page-enter-to {
+  transform: translate3d(0,0,0);
+}
+.page-leave {
+  transform: translate3d(0,0,0);
+}
+.page-leave-to {
+  transform: translate3d(-1000px,0,0);
+}
+
+.slide-right-active {
+  transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.4s;
+}
+.slide-right-enter-to {
+  transform: translate3d(2000px,0,0);
+}
+.slide-right-enter {
+  transform: translate3d(0,0,0);
+}
+.slide-right-leave-to {
+  transform: translate3d(2000px,0,0);
+}
+.slide-right-leave {
+  transform: translate3d(0,0,0);
+}
+
+.slide-left-active {
+  transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.3s;
+}
+.slide-left-enter-to {
+  transform: translate3d(-1000px,0,0);
+}
+.slide-left-enter {
+  transform: translate3d(0,0,0);
+}
+.slide-left-leave-to {
+  transform: translate3d(-1000px,0,0);
+}
+.slide-left-leave {
+  transform: translate3d(0,0,0);
+}
+

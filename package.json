@@ -1,0 +1,36 @@
+{
+  "name": "CO2ST",
+  "version": "1.0.0",
+  "description": "CO2ST Website",
+  "author": "CO2ST `Team",
+  "dependencies": {
+    "@nuxtjs/google-analytics": "1.0.0",
+    "@nuxtjs/pwa": "^2.0.5",
+    "@nuxtjs/sitemap": "0.0.3",
+    "nuxt": "1.0.0-rc11",
+    "nuxtent": "^1.0.1",
+    "@nuxtjs/axios": "^4.3.0"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "NODE_ENV='production' nuxt build",
+    "build-dev": "nuxt build",
+    "start": "NODE_ENV='production' nuxt start",
+    "start-dev": "nuxt start",
+    "generate": "STATIC=true nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "devDependencies": {
+    "ajv": "^6.1.1",
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.15.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6"
+  }
+}

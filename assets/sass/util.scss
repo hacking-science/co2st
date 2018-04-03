@@ -1,0 +1,50 @@
+// BASE
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+$root-font-size: 16px;
+$root-line-height: 1.5;
+
+$body-background: #fff;
+$body-color: #515151;
+
+
+// BREAKPOINTS
+
+$bp-tablet: 968px;
+
+// LAYOUT
+
+$w-preview: 32rem;
+$w-content: 38rem;
+
+// COLOR
+
+$gray-1: #333333;
+$gray-2: #4d4d4d;
+$gray-3: #666666;
+$gray-4: #e6e6e6;
+
+$primary-light: #eff3f5;
+$primary-dark: #45606e;
+
+
+// MIXINS
+
+@mixin dim-effect ($before, $after) {
+  opacity: $before;
+  transition: opacity 2s linear;
+
+  &:hover {
+    opacity: $after;
+    transition: all 2s ease;
+  }
+}
+
+@mixin lato-reg {
+  font-family: 'Lato', sans-serif;
+}
+
+@mixin lato-bold {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}

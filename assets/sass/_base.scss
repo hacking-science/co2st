@@ -1,0 +1,91 @@
+@import 'util';
+
+// --------------------
+// Base
+// --------------------
+
+.article__body {
+    @include lato-reg;
+    font-size: 13pt;
+    line-height: 2rem;
+        img {
+            width: 100%;
+        }
+        a {
+            color: white;
+            margin-bottom: 1px solid black;
+            background-color: #E91E63;
+            padding: 2px 4px;
+        }
+        em {
+            font-size: 12pt;
+        }
+}
+.project__body {
+    @include lato-reg;
+    font-size: 13pt;
+    line-height: 2rem;
+        img {
+            width: 100%;
+        }
+        a {
+            color: white;
+            margin-bottom: 1px solid black;
+            background-color: #E91E63;
+            padding: 2px 4px;
+        }
+        em {
+            font-size: 12pt;
+        }
+}
+
+// BREAKPOINTS
+
+// $bp-tablet: 768px;
+// $bp-desktop: 1028px;
+
+// :root {
+//     /* Break points */
+//     --minMd: 36em;
+//     --minLg: 48em;
+  
+//     /* Ratio on smaller screens */
+//     --ratioSm: 1.2; /* Minor third */
+  
+//     /* Ratio on larger screens */
+//     --ratioLg: 1.414; /* Augmented fourth */
+  
+//     /* Type scale */
+//     --stepUp1: media(
+//       calc(1em * var(--ratioSm)),
+//       (min-width: $bp-desktop) calc(1em * var(--ratioLg))
+//     );
+//     --stepUp2: media(
+//       calc(1em * var(--ratioSm) * var(--ratioSm)),
+//       (min-width: $bp-desktop) calc(1em * var(--ratioLg) * var(--ratioLg))
+//     );
+//     --stepUp3: media(
+//       calc(1em * var(--ratioSm) * var(--ratioSm) * var(--ratioSm)),
+//       (min-width: $bp-desktop) calc(1em * var(--ratioLg) * var(--ratioLg) * var(--ratioLg))
+//     );
+//     --stepDown1: media(
+//       calc(1em / var(--ratioSm)),
+//       (min-width: $bp-desktop) calc(1em / var(--ratioLg))
+//     );
+//   }
+  
+//   h1 {
+//     font-size: var(--stepUp3) !important;
+//   }
+  
+//   h2 {
+//     font-size: var(--stepUp2);
+//   }
+  
+//   h3 {
+//     font-size: var(--stepUp1);
+//   }
+  
+//   small {
+//     font-size: var(--stepDown1);
+//   }
