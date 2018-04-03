@@ -1,3 +1,23 @@
-# elkhazaani.space
+# CO2ST
 
-The site was built with [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Nuxtent](https://github.com/nuxt-community/nuxtent-module).
+## Requirements 
+
+**node JS**
+
+Install from [here](https://nodejs.org/en/download/)
+
+## Installing 
+
+```
+git clone https://github.com/hacking-science/co2st.git
+cd co2st 
+npm install
+```
+
+## Running development server
+
+```
+npm run dev
+```
+
+
