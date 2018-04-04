@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <main-container>
     <ul slot="content" class="article__list">
       <li v-for="(article, index) in articles" v-bind:key="index">
         <nuxt-link :to="article.path">
@@ -9,12 +11,18 @@
         </nuxt-link>
       </li>
     </ul>
+      </main-container>
+  </div>
 </template>
 
-
 <script>
+import MainContainer from '@/components/shared/MainContainer'
+
 /* eslint-disable */
 export default {
+  components: {
+    MainContainer
+  },
   asyncData: async ({ app, route }) => ({
     articles: await app.$content('/articles').getAll()
   }),
@@ -24,15 +32,6 @@ export default {
       const d = new Date(date).toString().split(' ')
       return `${d[2]} ${d[1]}`
     }
-  },
-  transition: {
-    name: 'slide-left',
-    enterClass: 'slide-left-enter-to',
-    enterToClass: 'slide-left-to',
-    enterActiveClass: 'slide-left-active',
-    leaveClass: 'slide-left-leave',
-    leaveToClass: 'slide-left-leave-to',
-    leaveActiveClass: 'slide-left-active'
   }
 }
 </script>

@@ -1,14 +1,28 @@
 <template>
-    <div class="home__header">
-        <div class="header__content">
-            <div class="header__titles">
-                <h2>carbon cost</h2>
-                <span>made</span>
-                <span>simple</span>
+    <div>
+        <main-container>
+            <div class="home__header" slot="content">
+                <div class="header__content">
+                    <div class="header__titles">
+                        <h2>carbon cost</h2>
+                        <span>made</span>
+                        <span>simple</span>
+                    </div>
+                </div>
             </div>
-        </div>
+        </main-container>
     </div>
 </template>
+
+<script>
+import MainContainer from '@/components/shared/MainContainer'
+export default {
+    components: {
+        MainContainer
+    }
+}
+</script>
+
 
 <style lang="scss" scoped>
 @import 'assets/sass/_variables.scss';
