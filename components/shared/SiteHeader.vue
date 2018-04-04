@@ -73,6 +73,7 @@ export default {
         }
     },
     mounted () {
+        this.checkMobile()
         this.windowResize()
     },
     computed: {
@@ -84,11 +85,14 @@ export default {
         }
     },
     methods: {
+        checkMobile () {
+            (window.innerWidth >= 514) ? this.mobile = true : this.mobile = false
+        },
         toggleMobileNav () {
             this.showMobileNav = !this.showMobileNav
         },
         windowResize () {
-            window.onresize = () => { (window.innerWidth >= 514) ? this.mobile = true : this.mobile = false }
+            window.onresize = () => this.checkMobile()
         }
     }
 }
