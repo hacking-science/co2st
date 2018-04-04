@@ -13,7 +13,7 @@
 
 
 <script>
-
+/* eslint-disable */
 export default {
   asyncData: async ({ app, route }) => ({
     articles: await app.$content('/articles').getAll()
