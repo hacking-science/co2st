@@ -103,13 +103,11 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/sass/util";
 .article__date {
-  @include lato-reg;
   color: grey;
   margin: 32px 0;
 }
 
 .article__title {
-  @include lato-bold;
   line-height: 2.8rem;
   margin: 64px 0;
   font-size: 26pt;
@@ -120,7 +118,6 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'left right';
-  @include lato-reg;
   p {
     margin: 0;
   }

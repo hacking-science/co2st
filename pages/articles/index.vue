@@ -45,13 +45,11 @@ export default {
 }
 
 .article__date {
-  @include lato-reg;
   margin-bottom: 8px;
   color: grey;
   white-space: nowrap;
 }
 .article__title {
-  @include lato-bold;
   font-size: 14pt;
   margin: 0;
 }

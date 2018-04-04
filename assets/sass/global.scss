@@ -1,5 +1,8 @@
 @import 'reset';
 @import 'base';
+@import 'typography';
+@import 'mixins';
+
 
 // --------------------
 // Nuxt
@@ -11,16 +14,16 @@
   transition: all ease-in-out 0.3s;
 }
 .page-enter {
-  transform: translate3d(-500px,0,0);
+  opacity: 0;
 }
 .page-enter-to {
-  transform: translate3d(0,0,0);
+  opacity: 1;
 }
 .page-leave {
-  transform: translate3d(0,0,0);
+  opacity: 1;
 }
 .page-leave-to {
-  transform: translate3d(-1000px,0,0);
+  opacity: 0;
 }
 
 .slide-right-active {

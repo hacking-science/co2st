@@ -1,5 +1,6 @@
 // const axios = require('axios')
 
+/* eslint-disable */
 module.exports = {
   head: {
     title: 'CO2ST',

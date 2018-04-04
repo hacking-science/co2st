@@ -39,12 +39,3 @@ $primary-dark: #45606e;
     transition: all 2s ease;
   }
 }
-
-@mixin lato-reg {
-  font-family: 'Lato', sans-serif;
-}
-
-@mixin lato-bold {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-}
