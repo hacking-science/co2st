@@ -53,7 +53,7 @@ export default {
   margin: 0;
 }
 
-@media screen and (min-width: $bp-tablet) {
+@media screen and (min-width: $tablet-width) {
   .article__item {
     display: grid;
     grid-template-columns: 80px 1fr;

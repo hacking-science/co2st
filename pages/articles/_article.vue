@@ -175,7 +175,7 @@ export default {
   background-color: $gray-4; 
 }
 
-@media screen and (min-width: $bp-tablet) {
+@media screen and (min-width: $tablet-width) {
   .article__title {
     font-size: 40pt;
     line-height: 4rem;
