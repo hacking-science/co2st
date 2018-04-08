@@ -1,10 +1,10 @@
 <template>
     <nav class="navbar" :class="layoutStyle">
-        <div class="navbar-container">
+        <div class="navbar-container w-85">
             <div class="navbar__left">
                 <div class="navbar__home" v-if="!showMobileNav">
                     <nuxt-link :to='"/"'>
-                        <h1>C02ST</h1>
+                        <h1>C0<sub>2</sub>ST</h1>
                     </nuxt-link>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     <div class="subnav__top-container">
                         <div class="subnav__home" @click="toggleMobileNav">
                             <nuxt-link :to='"/"'>
-                                <h1>C02ST</h1>
+                                <h1>C0<sub>2</sub>ST</h1>
                             </nuxt-link>
                         </div>
                         <div @click="toggleMobileNav">
@@ -101,6 +101,15 @@ export default {
 <style lang="scss" scoped>
 @import 'assets/sass/_variables.scss';
 
+h1 {
+    font-size: 32px;
+}
+
+sub { 
+    vertical-align: sub;
+    font-size: smaller;
+}
+
 .navbar {
     background-color: $green-600;
     height: $navbar-height;
@@ -111,7 +120,6 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 32px;
 }
 .landing-navbar {
     h1,
@@ -133,7 +141,7 @@ export default {
     display: flex;
 }
 .navbar__item {
-    margin-left: 12px;
+    margin-left: 24px;
 }
 .navbar__subnav {
     position: fixed;

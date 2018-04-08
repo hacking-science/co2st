@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="site-container">
         <site-header/>
         <slot name="content"/>
         <site-footer/>
@@ -17,3 +17,7 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>

@@ -2,11 +2,13 @@
     <div>
         <main-container>
             <div class="home__header" slot="content">
-                <div class="header__content">
-                    <div class="header__titles">
-                        <h2>carbon cost</h2>
-                        <span>made</span>
-                        <span>simple</span>
+                <div class="home__header-container w-85">
+                    <div class="header__content">
+                        <div class="header__titles">
+                            <h2>carbon cost</h2>
+                            <span>made</span>
+                            <span>simple</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -25,11 +27,13 @@ export default {
 
 
 <style lang="scss" scoped>
-@import 'assets/sass/_variables.scss';
+@import 'assets/sass/util.scss';
 
 .home__header {
-    height: calc(100vh - #{$navbar-height});
     background-color: $green-600;
+}
+.home__header-container {
+    height: calc(100vh - #{$navbar-height});
 }
 .header__content {
     height: 70%;
@@ -40,11 +44,11 @@ export default {
     font-weight: 700;
 }
 .header__titles h2 {
-    font-size: 44pt;
+    font-size: 60pt;
     color: white;
 }
 .header__titles span {
-    font-size: 44pt;
+    font-size: 60pt;
     display: block;
     color: whitesmoke;
 }
