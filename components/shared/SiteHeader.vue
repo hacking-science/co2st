@@ -111,7 +111,8 @@ sub {
 }
 
 .navbar {
-    background-color: $green-600;
+    // background-color: $green-600;
+    background-color: white;
     height: $navbar-height;
     display: grid;
     align-content: center;
@@ -124,10 +125,12 @@ sub {
 .landing-navbar {
     h1,
     span {
-        color: white;
+        // color: white;
+        color: black;
     }
     .line {
-        background: white;
+        // background: white;
+        color: black;
     }
 }
 .content-navbar {
@@ -147,7 +150,8 @@ sub {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: $green-600;
+    // background-color: $green-600;
+    background-color: rgba(44, 179, 62, 0.8);
     z-index: 999;
 }
 .subnav__top {
