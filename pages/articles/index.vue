@@ -17,7 +17,7 @@
           </li>
         </ul>
       </div>
-      </main-container>
+    </main-container>
   </div>
 </template>
 
@@ -62,7 +62,7 @@ a {
 }
 
 .article__item {
-  margin-bottom: 128px;
+  margin-bottom: 64px;
 }
 
 .article__date {

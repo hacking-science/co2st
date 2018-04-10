@@ -1,11 +1,16 @@
 <template>
-<div class="article">
-        <div slot="content">
-            <h4 class="article__date">{{ articleDate(article.date) }}</h4>
-            <h1 class="article__title">{{ article.title }}</h1>
-            <div class="article__body" v-html="article.body"></div>
+<div>
+  <main-container>
+      <div class="article" slot="content">
+        <div>
+            <h2 class="article__title w-90">{{ article.title }}</h2>
+            <img :src="`/${article.image}`" :alt="article.title">
+            <div class="article__meta">
+              <span class="article__author w-90">By {{ article.author }}</span>
+              <span class="article__date w-90">{{ articleDate(article.date) }}</span>
+            </div>
+            <div class="article__body w-90" v-html="article.body"></div>
         </div>
-        <div slot="pagination">
           <div class="pagination">
               <nuxt-link :to="pageLeftPath">
                 <div class="pagination__box">
@@ -35,15 +40,21 @@
                   </div>
                 </div>
               </nuxt-link>
-          </div>
         </div>
-</div>
+      </div>
+    </main-container>
+  </div>
 </template>
 
 
 <script>
+import MainContainer from '@/components/shared/MainContainer'
+
 /* eslint-disable */
 export default {
+  components: {
+    MainContainer
+  },
   asyncData: async ({ app, route }) => ({
     articles: await app.$content('/articles').getAll(),
     article: await app.$content('/articles').get(route.path)
@@ -87,30 +98,51 @@ export default {
       const d = new Date(date).toString().split(' ')
       return `${d[2]} ${d[1]} ${d[3]}`
     }
-  },
-  transition: {
-    name: 'slide-right',
-    enterClass: 'slide-right-enter-to',
-    enterToClass: 'slide-right-to',
-    enterActiveClass: 'slide-right-active',
-    leaveClass: 'slide-right-leave',
-    leaveToClass: 'slide-right-leave-to',
-    leaveActiveClass: 'slide-right-active'
   }
 }
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/sass/util";
+
+h2 {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
 .article__date {
   color: grey;
-  margin: 32px 0;
+  font-size: 10pt;
 }
 
 .article__title {
   line-height: 2.8rem;
-  margin: 64px 0;
+  margin-bottom: 64px;
   font-size: 26pt;
+}
+
+.article__body {
+  line-height: 1.4;
+  margin-bottom: 64px;
+
+  p {
+    margin-bottom: 16px;
+  }
+}
+
+.article__meta {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0 32px 0;
+}
+
+.article__author {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 10pt;
+
 }
 
 

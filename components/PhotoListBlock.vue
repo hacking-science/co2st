@@ -29,12 +29,12 @@ img {
     width: 100%;
 }
 .p-l-block {
-    margin: 128px 0;
+    margin: 160px 0;
 }
 .p-l-block__content {
-    background-color: rgba(63, 191, 191, 0.3);
+    background-color: lightgrey;
     padding: 16px;
-    margin: 16px;
+    margin: -40px 16px 0 16px;
 }
 .p-l-block__list {
     margin: 16px 0;
