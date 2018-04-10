@@ -68,7 +68,7 @@ export default {
                 'calculator': 'Calculator',
                 'about': 'About',
                 'get-involved': 'Get Involved',
-                'articles': 'Articles'
+                'news': 'News'
             }
         }
     },

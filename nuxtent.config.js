@@ -1,13 +1,12 @@
 module.exports = {
-  content: [
-    ['articles', {
-      page: '/_article',
-      permalink: 'articles/:slug',
-      generate: ['get', 'getAll']
-
-    }]
-  ],
-  api: {
-    baseURL: ''
-  }
+    content: [
+        ['news', {
+            page: '/_article',
+            permalink: 'news/:slug',
+            generate: ['get', 'getAll']
+        }]
+    ],
+    api: {
+        baseURL: ''
+    }
 }
