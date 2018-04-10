@@ -28,7 +28,6 @@ export default {
 
 .cotnainer {
     height: 50vh;
-    @include center;
 }
 
 h1 {

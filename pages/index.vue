@@ -1,29 +1,21 @@
 <template>
     <div>
         <main-container>
-            <div class="home__header" slot="content">
-                <div class="home__header-container w-85">
-                    <div class="header__content">
-                        <div class="header__titles">
-                            <div class="header__animation">
-                                <svg width="0" height="0">
-                                    <defs>
-                                        <clipPath id="myClip">
-                                            <text x="0" y="0">
-                                                <tspan x="0" dy="1.32em">carbon</tspan>
-                                                <tspan x="0" dy="0.92em">cost</tspan>
-                                            </text>
-                                        </clipPath>
-                                    </defs>
-                                    </svg>
-                                <video id="myVideo" class="clip-svg" autoplay loop>    
-                                    <source id="ss"  :src="`videos/video${video_count}.mp4`" type='video/mp4'>
-                                </video>
+            <div slot="content">
+                <div class="home">
+                    <div class="home__header">
+                        <div class="home__header-container w-85">
+                            <div class="header__content">
+                                <h2 class="header__text">
+                                    Passing power to the consumer
+                                </h2>
+                                <div class="header__video">
+                                    <video src="videos/video1.mp4" autoplay muted loop></video>
+                                </div>
                             </div>
-                            <span>made</span>
-                            <span>simple</span>
                         </div>
                     </div>
+                    <photo-text-blocks :infoList="infoList"></photo-text-blocks>
                 </div>
             </div>
         </main-container>
@@ -32,29 +24,27 @@
 
 <script>
 import MainContainer from '@/components/shared/MainContainer'
+import PhotoTextBlocks from '@/components/PhotoTextBlocks'
+
 export default {
     components: {
-        MainContainer
+        MainContainer,
+        PhotoTextBlocks
     },
     data () {
         return {
-            video_count: 1
-        }
-    },
-    mounted () {
-        let source = this.$el.querySelector('#ss')
-        console.log(source)
-        source.addEventListener('ended', this.runNextVideo, false)
-    },
-    methods: {
-        runNextVideo () {
-            this.video_count++
-            if (this.video_count === 4) this.video_count = 1
-            let video = this.$el.querySelector('#myVideo')
-            let source = this.$el.querySelector('#ss')
-            source.setAttribute('src', 'videos/video' + this.video_count + '.mp4')
-            video.load()
-            video.play()
+            infoList: [
+                {
+                    title: 'Our mission',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis commodo massa, vel pretium nulla viverra in. Vestibulum ornare luctus sem in rutrum. Proin vel orci in erat elementum mollis. Ut gravida aliquam sodales. Cras ut justo tellus. Donec lobortis in neque quis vulputate. Vestibulum vitae massa ac lacus tempor elementum.',
+                    image: 'img/home/coin-trick.jpg'
+                },
+                {
+                    title: 'section 2',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis commodo massa, vel pretium nulla viverra in. Vestibulum ornare luctus sem in rutrum. Proin vel orci in erat elementum mollis. Ut gravida aliquam sodales. Cras ut justo tellus. Donec lobortis in neque quis vulputate. Vestibulum vitae massa ac lacus tempor elementum.',
+                    image: 'img/home/slow-down.jpg'
+                }
+            ]
         }
     }
 }
@@ -63,47 +53,15 @@ export default {
 <style lang="scss" scoped>
 @import 'assets/sass/util.scss';
 
-.home__header {
-    // background-color: $green-600;
-    background-color: white;
-}
 .home__header-container {
     height: calc(100vh - #{$navbar-height});
+    @include center-child-horiz-vert;
 }
-.header__content {
-    height: 90%;
-    display: grid;
-    align-content: end;
+.header__text {
+    margin-bottom: 16px;
+}
 
-    svg {
-        position: relative;
-        font-family: Helvetica, Arial, sans-serif;
-        font-weight: 700;
-        font-size: 120px;
-    }
-
-    .clip-svg {
-        clip-path: url(#myClip);
-    }
-
-    video {
-        width: 500px;
-    }
-    .header__animation {
-        width: 400px;
-    }
-}
-.header__titles {
-    font-weight: 700;
-}
-.header__titles h2 {
-    font-size: 120pt;
-    color: white;
-}
-.header__titles span {
-    font-size: 70pt;
-    display: block;
-    // color: whitesmoke;
-    color: black;
+.header__video video {
+    width: 100%;
 }
 </style>

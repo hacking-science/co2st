@@ -2,12 +2,26 @@
     font-weight: 700;
 }
 
-@mixin center {
+// CENTERING 
+
+// Center child element horizontally and vertically
+@mixin center-child-horiz-vert {
   display: grid;
   justify-content: center;
   align-content: center;
 }
-// MIXINS
+
+// Center child element vertically
+@mixin center-child-vert {
+  display: grid;
+  align-content: center;
+}
+
+// Center child element horizontally
+@mixin center-child-horiz {
+  display: grid;
+  justify-content: center;
+}
 
 @mixin dim-effect ($before, $after) {
     opacity: $before;
