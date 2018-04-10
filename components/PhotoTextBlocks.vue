@@ -27,7 +27,7 @@ export default {
             window.addEventListener('scroll', this.fadeInEffect)
         },
         fadeInEffect () {
-            Array.from(this.$el.querySelectorAll('.p-t-block')).forEach(e => {
+            Array.from(this.$el.querySelectorAll('.p-t-block__image')).forEach(e => {
                 if (vp.isInViewport(e)) {
                     e.classList.add('fade-in')
                 }
@@ -36,3 +36,9 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.home__content > *:not(:first-child) {
+    margin: 150px 0;
+}
+</style>

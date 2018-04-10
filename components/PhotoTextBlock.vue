@@ -25,15 +25,10 @@ img {
     width: 100%;
 }
 
-.p-t-block {
-    margin: 150px 0;
+.p-t-block__image {
     opacity: 0;
     transform: translate3d(0, 200px, 0);
     transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.6s;
-}
-
-.p-t-block:first {
-    margin-bottom: 150px;
 }
 
 .fade-in {
