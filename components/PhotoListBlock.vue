@@ -29,9 +29,12 @@ img {
     width: 100%;
 }
 .p-l-block {
-    margin: 64px 0;
+    margin: 128px 0;
 }
-
+.p-l-block__content {
+    background-color: rgba(63, 191, 191, 0.3);
+    padding: 16px;
+}
 .p-l-block__list {
     margin: 16px 0;
     list-style: disc;
@@ -41,8 +44,8 @@ img {
 .p-l-block__list-item {
     margin: 8px 0;
 }
-
 .p-l-block__image {
-    margin: 32px 0;
+    padding: 16px;
 }
+
 </style>

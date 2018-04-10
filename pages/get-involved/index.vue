@@ -32,6 +32,8 @@
 </template>
 
 <script>
+// import parallax from '@/lib/parallax'
+
 import MainContainer from '@/components/shared/MainContainer'
 import PhotoListBlocks from '@/components/PhotoListBlocks'
 
