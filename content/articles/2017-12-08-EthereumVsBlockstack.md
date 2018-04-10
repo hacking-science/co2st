@@ -1,5 +1,8 @@
 ---
 title: "Why I’m betting on Blockstack to save the decentralized internet"
+image: "img/home/slow-down.jpg"
+author: "Author"
+summary: "Which platform will prevail? Well, remember the last time you had to buy a new phone and had to choose between Apple or Android?"
 ---
 
 In my [previous post](mainstream-dapps), I argued that for cryptocurrencies to acquire real, unquestionable value, the crypto space needs entrepreneurs with novel dApp ideas (not just copycat dApp ideas) to incentivize the mainstream usage of these digital currencies. I ended by saying that the technology that makes it easier for developers with fresh ideas to enter the space and start experimenting with dApps, will have the biggest impact moving forward. What I didn’t say (because the topic deserved a post of its own), is that the general technology that is going to make this happen is already evident: the same way MacOS and Android facilitated the creation and usage of native applications, there will be dominant platforms that facilitate the creation and usage of dApps and make them native to the existing internet.

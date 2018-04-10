@@ -1,16 +1,22 @@
 <template>
   <div>
     <main-container>
-    <ul slot="content" class="article__list">
-      <li v-for="(article, index) in articles" v-bind:key="index">
-        <nuxt-link :to="article.path">
-          <div class="article__item">
-            <h4 class="article__date">{{ articleDate(article.date) }}</h4>
-            <h2 class="article__title">{{ article.title }} </h2>
-          </div>
-        </nuxt-link>
-      </li>
-    </ul>
+      <div class="articles" slot="content">
+        <ul class="article__list">
+          <li v-for="(article, index) in articles" v-bind:key="index">
+            <nuxt-link :to="article.path">
+              <div class="article__item">
+                <img :src="article.image" :alt="article.title">
+                <div class="article__text w-85">
+                  <h2 class="article__title">{{ article.title }} </h2>
+                  <p class="article__summary">{{ article.summary }}</p>
+                  <span class="article__date">{{ articleDate(article.date) }}</span>
+                </div>
+              </div>
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
       </main-container>
   </div>
 </template>
@@ -30,7 +36,7 @@ export default {
   methods: {
     articleDate (date) {
       const d = new Date(date).toString().split(' ')
-      return `${d[2]} ${d[1]}`
+      return `${d[2]} ${d[1]} ${d[3]}`
     }
   }
 }
@@ -39,18 +45,40 @@ export default {
 <style lang="scss">
 @import "../../assets/sass/util";
 
-.article__list li {
-  margin: 32px 0;
+h2 {
+  line-height: 1.4;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: black;
+}
+
+.articles {
+  text-align: center;
+}
+
+.article__item {
+  margin-bottom: 128px;
 }
 
 .article__date {
   margin-bottom: 8px;
   color: grey;
-  white-space: nowrap;
+  font-size: 9pt;
 }
 .article__title {
   font-size: 14pt;
-  margin: 0;
+  margin: 32px 0;
+}
+.article__summary {
+  color: lightslategrey;
+  line-height: 1.3;
+  margin-bottom: 32px;
+  font-size: 10pt;
 }
 
 @media screen and (min-width: $tablet-width) {

@@ -34,6 +34,7 @@ img {
 .p-l-block__content {
     background-color: rgba(63, 191, 191, 0.3);
     padding: 16px;
+    margin: 16px;
 }
 .p-l-block__list {
     margin: 16px 0;
@@ -43,9 +44,6 @@ img {
 
 .p-l-block__list-item {
     margin: 8px 0;
-}
-.p-l-block__image {
-    padding: 16px;
 }
 
 </style>

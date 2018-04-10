@@ -1,7 +1,7 @@
 <template>
     <div>
         <main-container>
-            <div class="about w-85" slot="content">
+            <div class="about" slot="content">
                 <div class="about__header">
                     <div class="about__header-container">
                         <div class="header__content">
@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <photo-list-blocks :infoList="infoList"></photo-list-blocks>
-                <section class="events">
+                <section class="events w-90">
                     <div class="events__header">
                         <h2 class="events__title">
                             Upcoming events

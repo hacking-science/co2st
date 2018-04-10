@@ -1,5 +1,8 @@
 ---
 title: "Cryptocurrencies: what they need to acquire real, unquestionable value"
+image: "img/home/slow-down.jpg"
+author: "Author"
+summary: "Despite all the excitement around cryptocurrencies, Initial Coin Offerings (ICOs), and tokens, most digital assets being bought right now are only for investment and speculation purposes. My non-tech friends"
 ---
 
 Despite all the excitement around cryptocurrencies, Initial Coin Offerings (ICOs), and tokens, most digital assets being bought right now are only for investment and speculation purposes. My non-tech friends, for example, aren’t telling me to use Steemit (decentralized Reddit) or OpenBazaar (decentralized Ebay), they’re telling me to buy Bitcoin or this new, hot cryptocurrency called Ethereum.
