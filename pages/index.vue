@@ -22,7 +22,7 @@
                             <div class="pagination__text">
                                 <span>Go to the Carbon Cost Calculator</span>
                             </div>
-                            <div class="pagination__arrow-right">
+                            <div class="pagination__arrow">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8">
                                     <path d="M5 0v2h-5v1h5v2l3-2.53-3-2.47z" transform="translate(0 1)" fill="white" />
                                 </svg>
@@ -94,10 +94,14 @@ export default {
     align-content: center;
     padding: 16px;
     
-    .pagination__arrow-right {
+    .pagination__arrow {
       display: grid;
       flex-direction: column;
       align-content: center;
+      animation-name: rock-back-and-forth;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+
     }
     .pagination__text {
       margin-left: 16px;
@@ -106,5 +110,11 @@ export default {
       line-height: 1.4;
     }
   }
+}
+
+@keyframes rock-back-and-forth {
+    0% {transform: translate3d(8px, 0, 0);}
+    50% {transform: translate3d(-8px, 0, 0);}
+    100% {transform: translate3d(8px, 0, 0);}
 }
 </style>
