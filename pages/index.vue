@@ -16,6 +16,20 @@
                         </div>
                     </div>
                     <photo-text-blocks :infoList="infoList"></photo-text-blocks>
+                    <nuxt-link :to="'calculator'">
+                    <div class="pagination">
+                        <div class="pagination__box">
+                            <div class="pagination__text">
+                                <span>Go to the Carbon Cost Calculator</span>
+                            </div>
+                            <div class="pagination__arrow-right">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8">
+                                    <path d="M5 0v2h-5v1h5v2l3-2.53-3-2.47z" transform="translate(0 1)" fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </nuxt-link>
                 </div>
             </div>
         </main-container>
@@ -63,5 +77,34 @@ export default {
 
 .header__video video {
     width: 100%;
+}
+
+.pagination {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: '. right';
+
+  .pagination__box {
+    grid-area: right;
+    background-color: #191919;
+    display: grid;
+    justify-content: start;
+    height: 48px;
+    display: flex;
+    align-content: center;
+    padding: 16px;
+    
+    .pagination__arrow-right {
+      display: grid;
+      flex-direction: column;
+      align-content: center;
+    }
+    .pagination__text {
+      margin-left: 16px;
+      @include center-child-vert;
+      color: white;
+      line-height: 1.4;
+    }
+  }
 }
 </style>
