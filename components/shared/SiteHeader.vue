@@ -66,7 +66,6 @@ export default {
             mobile: false,
             navItems: {
                 'calculator': 'Calculator',
-                'about': 'About',
                 'get-involved': 'Get Involved',
                 'news': 'News'
             }
