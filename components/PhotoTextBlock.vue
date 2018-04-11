@@ -1,9 +1,11 @@
 <template>
     <div class="p-t-block">
-        <div class="p-t-block-container">
+        <div class="p-t-block-container" :class="`block_${index}`">
             <div class="p-t-block__text">
-                <h2 class="p-t-block__title">{{ info.title }}</h2>
-                <p class="p-t-block__text">{{ info.text }}</p>
+                <div class="p-t-block__text-wrapper">
+                    <h2 class="p-t-block__title">{{ info.title }}</h2>
+                    <p class="p-t-block__text">{{ info.text }}</p>
+                </div>
             </div>
             <div class="p-t-block__image">
                 <img :src="info.image" :alt="info.title">
@@ -15,26 +17,56 @@
 <script>
 export default {
     props: {
-        info: { type: Object }
+        info: { type: Object },
+        index: { type: Number }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+@import 'assets/sass/util.scss';
+
 img {
     width: 100%;
 }
+.p-t-block-container {
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'content image';
+        grid-gap: 64px;
+    }
+}
+.p-t-block__text {
+    grid-area: content;
+    @include center-child-horiz-vert;
 
+    p {
+        font-size: 14pt;
+    }
+}
 .p-t-block__image {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-    transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.6s;
+    grid-area: image;
+    // opacity: 0;
+    transform: translateX(120%);
 }
 
 .fade-in {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+    // opacity: 1;
+    animation: slide-in forwards 1s;
 }
+
+.block_1 {
+    grid-template-areas: 'image content';
+    .p-t-block__image {
+        transform: translateX(-120%);
+    }
+}
+
+@keyframes slide-in {
+    100% {transform: translateX(0%);}
+}
+
 .p-t-block__title {
     margin-bottom: 16px;
 }

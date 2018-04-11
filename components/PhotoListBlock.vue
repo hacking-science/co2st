@@ -25,13 +25,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'assets/sass/util.scss';
+
 img {
     width: 100%;
 }
 .p-l-block {
     margin: 160px 0;
 }
+
+.p-l-block-container {
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.p-l-block__image {
+    grid-area: image;
+}
 .p-l-block__content {
+    grid-area: content;
     background-color: white;
     box-shadow: 0px 4px 20px -2px rgba(0,0,0,0.47);
     border-radius: 10px;
@@ -47,5 +60,6 @@ img {
 .p-l-block__list-item {
     margin: 8px 0;
 }
+
 
 </style>

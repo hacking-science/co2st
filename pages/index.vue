@@ -80,6 +80,12 @@ export default {
 .header__video video {
     width: 100%;
 }
+.header__content {
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 .pagination {
   display: grid;
