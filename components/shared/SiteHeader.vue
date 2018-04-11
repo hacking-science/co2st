@@ -9,16 +9,16 @@
                 </div>
             </div>
             <div class="navbar__right">
-                <div class="navbar__menu" v-if="!mobile && !showMobileNav">
+                <div class="navbar__menu">
                     <div @click="toggleMobileNav">
                         <div class="menu__button-open">
-                            <div class="line open"></div>
-                            <div class="line open"></div>
-                            <div class="line open"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
                         </div>
                     </div>
                 </div>
-                <div class="navbar__nav" v-if="mobile">
+                <div class="navbar__nav">
                     <ul class="navbar__items">
                         <li class="navbar__item" v-for="(value, key, index) in navItems" :key="index">
                             <nuxt-link :to="key">
@@ -40,8 +40,8 @@
                         </div>
                         <div @click="toggleMobileNav">
                             <div class="menu__button-close">
-                                <div class="cross open"></div>
-                                <div class="cross open"></div>
+                                <div class="cross"></div>
+                                <div class="cross"></div>
                             </div>
                         </div>
                     </div>
@@ -75,14 +75,6 @@ export default {
         this.checkMobile()
         this.windowResize()
     },
-    computed: {
-        isLanding () {
-            return ['/', ...Object.keys(this.navItems)].indexOf(this.$route.path) > -1
-        },
-        layoutStyle () {
-            return this.isLanding ? 'landing-navbar' : 'content-navbar'
-        }
-    },
     methods: {
         checkMobile () {
             (window.innerWidth >= 514) ? this.mobile = true : this.mobile = false
@@ -98,7 +90,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'assets/sass/_variables.scss';
+@import 'assets/sass/util.scss';
 
 h1 {
     font-size: 32px;
@@ -121,23 +113,23 @@ sub {
     flex-direction: row;
     justify-content: space-between;
 }
-.landing-navbar {
-    h1,
-    span {
-        // color: white;
-        color: black;
-    }
-    .line {
-        // background: white;
-        color: black;
-    }
-}
 .content-navbar {
     background-color: white;
 }
 .navbar-left {
     display:  grid;
     align-content:  center;
+}
+.navbar__nav{
+    display: none;
+    @include tablet {
+        display: initial;
+    }
+}
+.navbar__menu {
+    @include tablet {
+        display: none;
+    }
 }
 .navbar__items {
     display: flex;
@@ -150,8 +142,11 @@ sub {
     height: 100%;
     width: 100%;
     // background-color: $green-600;
-    background-color: rgba(44, 179, 62, 0.8);
+    background-color: #757575;
     z-index: 999;
+}
+.subnav-container {
+    height:  80%;
 }
 .subnav__top {
     height: $navbar-height;
@@ -170,6 +165,7 @@ sub {
     display: grid;
     justify-content: center;
     align-content: center;
+    height: 60%;
 }
 
 .subnav__item {
@@ -198,22 +194,14 @@ sub {
 
     &:nth-child(1) {
         transform: translate3d(0, 5px, 0) rotate(45deg); 
-        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-    }
-    &:nth-child(2) {
-        transform: rotate(-45deg);
-        clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%);
-    }
-
-    &:nth-child(1).open {
-        transform: translate3d(0, 5px, 0) rotate(45deg); 
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         transition: all linear .2s .3s;
     }
-    &:nth-child(2).open {
+    &:nth-child(2) {
         transform: rotate(-45deg); 
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         transition: all linear .1s .5s;
     }
 }
+
 </style>
