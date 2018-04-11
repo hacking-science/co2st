@@ -2,7 +2,7 @@
 <div>
   <main-container>
       <div class="article" slot="content">
-        <div>
+        <div class="article__content">
             <h2 class="article__title w-90">{{ article.title }}</h2>
             <img :src="`/${article.image}`" :alt="article.title">
             <div class="article__meta">
@@ -56,8 +56,8 @@ export default {
     MainContainer
   },
   asyncData: async ({ app, route }) => ({
-    articles: await app.$content('/articles').getAll(),
-    article: await app.$content('/articles').get(route.path)
+    articles: await app.$content('/news').getAll(),
+    article: await app.$content('/news').get(route.path)
   }),
   created () {
     this.pageIndex = this.article.meta.index
@@ -121,6 +121,7 @@ img {
   line-height: 2.8rem;
   margin-bottom: 64px;
   font-size: 26pt;
+  text-align: center;
 }
 
 .article__body {

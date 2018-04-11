@@ -1,6 +1,6 @@
 <template>
     <div class="p-t-block">
-        <div class="p-t-block-container w-85">
+        <div class="p-t-block-container">
             <div class="p-t-block__text">
                 <h2 class="p-t-block__title">{{ info.title }}</h2>
                 <p class="p-t-block__text">{{ info.text }}</p>

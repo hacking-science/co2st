@@ -30,7 +30,7 @@ export default {
     MainContainer
   },
   asyncData: async ({ app, route }) => ({
-    articles: await app.$content('/articles').getAll()
+    articles: await app.$content('/news').getAll()
   }),
 
   methods: {

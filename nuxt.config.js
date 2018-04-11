@@ -31,7 +31,8 @@ module.exports = {
     // ['@nuxtjs/google-analytics', { ua: 'UA-80644113-1' }]
   ],
   css: [
-    { src: '~assets/sass/global.scss', lang: 'scss' }
+    { src: '~assets/sass/global.scss', lang: 'scss' },
+    { src: 'vuetify/src/stylus/app.styl', lang: 'styl'}
   ],
   // sitemap: {
   //   generate: true,

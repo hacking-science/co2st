@@ -8,7 +8,6 @@
     "@nuxtjs/google-analytics": "1.0.0",
     "@nuxtjs/pwa": "^2.0.5",
     "@nuxtjs/sitemap": "0.0.3",
-    "lodash.throttle": "^4.1.1",
     "nuxt": "1.0.0-rc11",
     "nuxtent": "^1.0.1"
   },
