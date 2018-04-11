@@ -47,12 +47,13 @@ img {
 }
 .p-t-block__image {
     grid-area: image;
+    display: none;
     // opacity: 0;
     transform: translateX(120%);
 }
 
 .fade-in {
-    // opacity: 1;
+    display: initial;
     animation: slide-in forwards 1s;
 }
 
