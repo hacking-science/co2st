@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar" :class="layoutStyle">
+    <nav class="navbar">
         <div class="navbar-container w-85">
             <div class="navbar__left">
                 <div class="navbar__home" v-if="!showMobileNav">
