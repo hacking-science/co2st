@@ -45,3 +45,15 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+@import 'assets/sass/util.scss';
+
+.get-involved__content {
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 64px;
+    }
+}
+</style>

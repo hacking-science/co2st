@@ -138,6 +138,10 @@ sub {
 }
 .navbar__item {
     margin-left: 24px;
+
+    span {
+        font-size: 16pt;
+    }
 }
 .navbar__subnav {
     position: fixed;

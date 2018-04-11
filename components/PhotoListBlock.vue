@@ -32,14 +32,11 @@ img {
 }
 .p-l-block {
     margin: 160px 0;
-}
-
-.p-l-block-container {
     @include tablet {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        margin: 40px 0;
     }
 }
+
 .p-l-block__image {
     grid-area: image;
 }

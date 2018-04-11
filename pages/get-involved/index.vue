@@ -1,7 +1,7 @@
 <template>
     <div>
         <main-container>
-            <div class="about" slot="content">
+            <div class="about w-90" slot="content">
                 <div class="about__header">
                     <div class="about__header-container">
                         <div class="header__content">
@@ -14,13 +14,17 @@
                         </div>
                     </div>
                 </div>
-                <photo-list-blocks :infoList="infoList"></photo-list-blocks>
+                <div class="get-involved__content">
+                    <photo-list-blocks :infoList="infoList"></photo-list-blocks>
+                </div>
                 <section class="events w-90">
-                    <div class="events__header">
-                        <h2 class="events__title">
-                            Upcoming events
-                        </h2>
-                        <p class="events__text">{{ events.text }}</p>
+                    <div class="events__header-container">
+                        <div class="events__header">
+                            <h2 class="events__title">
+                                Upcoming events
+                            </h2>
+                            <p class="events__text">{{ events.text }}</p>
+                        </div>
                     </div>
                     <div class="events__calendar">
                         <iframe :src="events.url" style="border: 0" frameborder="0" scrolling="no"></iframe>
@@ -110,11 +114,28 @@ iframe {
 .header__video video {
     width: 100%;
 }
+.events {
+    margin-bottom: 64px;
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 64px;
+    }
+}
+.get-involved__content {
+    margin-bottom: 64px;
+}
+.events__header-container {
+    @include center-child-horiz-vert;
+}
 .events__header {
     background-color: white;
     box-shadow: 0px 4px 20px -2px rgba(0,0,0,0.47);
     border-radius: 12px;
     padding: 16px;
+    @include tablet {
+        padding: 32px;
+    }
 }
 .events__text {
     margin: 16px 0;

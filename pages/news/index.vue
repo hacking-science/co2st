@@ -1,7 +1,7 @@
 <template>
   <div>
     <main-container>
-      <div class="articles" slot="content">
+      <div class="articles w-85" slot="content">
         <ul class="article__list">
           <li v-for="(article, index) in articles" v-bind:key="index">
             <nuxt-link :to="article.path">
@@ -59,10 +59,15 @@ a {
 
 .articles {
   text-align: center;
+  margin-top: 32px;
 }
 
 .article__item {
   margin-bottom: 64px;
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
 }
 
 .article__date {
@@ -79,16 +84,6 @@ a {
   line-height: 1.3;
   margin-bottom: 32px;
   font-size: 10pt;
-}
-
-@media screen and (min-width: $tablet-width) {
-  .article__item {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-  }
-  .article__date {
-    margin-right: 32px;
-  }
 }
 
 </style>

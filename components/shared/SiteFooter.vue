@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="w-85">
       <div class="region-footer">
           <div class="row">
               <div class="col col-left">
@@ -37,7 +37,6 @@ a {
     width: 18px;
 }
 .region-footer {
-    margin: 0 24px;
     text-align: center;
     font-size: 11pt;
     font-weight: 700;
@@ -86,11 +85,11 @@ a {
     }
 }
 @media screen and (min-width: $screen-lg) {
-    .region-footer {
-        display: grid;
-        grid-template-columns: 1fr $container 1fr;
-        grid-template-areas: '. row .';
-    }
+    // .region-footer {
+    //     display: grid;
+    //     grid-template-columns: 1fr $container 1fr;
+    //     grid-template-areas: '. row .';
+    // }
     .row {
         grid-area: row;
     }
