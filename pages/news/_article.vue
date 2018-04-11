@@ -3,7 +3,7 @@
   <main-container>
       <div class="article" slot="content">
         <div class="article__content">
-            <h2 class="article__title w-90">{{ article.title }}</h2>
+            <h2 class="article__title">{{ article.title }}</h2>
             <img :src="`/${article.image}`" :alt="article.title">
             <div class="article__meta">
               <span class="article__author w-90">By {{ article.author }}</span>
