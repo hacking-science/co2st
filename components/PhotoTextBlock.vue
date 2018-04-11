@@ -27,7 +27,7 @@ img {
 
 .p-t-block__image {
     opacity: 0;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
     transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.6s;
 }
 
@@ -35,7 +35,9 @@ img {
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
-
+.p-t-block__title {
+    margin-bottom: 16px;
+}
 .p-t-block__text {
     line-height: 1.4;
 }

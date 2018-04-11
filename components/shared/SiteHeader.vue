@@ -91,7 +91,9 @@ export default {
 
 <style lang="scss" scoped>
 @import 'assets/sass/util.scss';
-
+a {
+    color: black;
+}
 h1 {
     font-size: 32px;
 }

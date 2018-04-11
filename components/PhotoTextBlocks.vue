@@ -39,6 +39,6 @@ export default {
 
 <style lang="scss" scoped>
 .home__content > *:not(:first-child) {
-    margin: 150px 0;
+    margin: 96px 0;
 }
 </style>

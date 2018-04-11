@@ -32,7 +32,9 @@ img {
     margin: 160px 0;
 }
 .p-l-block__content {
-    background-color: lightgrey;
+    background-color: white;
+    box-shadow: 0px 4px 20px -2px rgba(0,0,0,0.47);
+    border-radius: 10px;
     padding: 16px;
     margin: -40px 16px 0 16px;
 }

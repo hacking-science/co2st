@@ -15,12 +15,14 @@
                             </div>
                         </div>
                     </div>
-                    <photo-text-blocks :infoList="infoList"></photo-text-blocks>
+                    <div class="home__content w-85">
+                        <photo-text-blocks :infoList="infoList"></photo-text-blocks>
+                    </div>
                     <nuxt-link :to="'calculator'">
                     <div class="pagination">
                         <div class="pagination__box">
                             <div class="pagination__text">
-                                <span>Go to the Carbon Cost Calculator</span>
+                                <span>Go to the C02 Allowance Calculator</span>
                             </div>
                             <div class="pagination__arrow">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8">
@@ -83,13 +85,14 @@ export default {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: '. right';
+  margin-bottom: 32px;
 
   .pagination__box {
     grid-area: right;
     background-color: #191919;
     display: grid;
     justify-content: start;
-    height: 48px;
+    height: 80px;
     display: flex;
     align-content: center;
     padding: 16px;
@@ -108,6 +111,7 @@ export default {
       @include center-child-vert;
       color: white;
       line-height: 1.4;
+      font-size: 14pt;
     }
   }
 }

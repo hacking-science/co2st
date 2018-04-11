@@ -110,7 +110,12 @@ iframe {
 .header__video video {
     width: 100%;
 }
-
+.events__header {
+    background-color: white;
+    box-shadow: 0px 4px 20px -2px rgba(0,0,0,0.47);
+    border-radius: 12px;
+    padding: 16px;
+}
 .events__text {
     margin: 16px 0;
     line-height: 1.5;
