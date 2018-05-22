@@ -32,7 +32,6 @@ module.exports = {
   ],
   css: [
     { src: '~assets/sass/global.scss', lang: 'scss' },
-    { src: 'vuetify/src/stylus/app.styl', lang: 'styl'}
   ],
   // sitemap: {
   //   generate: true,
