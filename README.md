@@ -37,3 +37,4 @@ The static folder is served by webpack and will therefore appear in the root dir
 </videos>
 
 ```
+test: CHAM
