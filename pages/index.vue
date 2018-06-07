@@ -51,13 +51,13 @@ export default {
         return {
             infoList: [
                 {
-                    title: 'Our mission',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis commodo massa, vel pretium nulla viverra in. Vestibulum ornare luctus sem in rutrum. Proin vel orci in erat elementum mollis. Ut gravida aliquam sodales. Cras ut justo tellus. Donec lobortis in neque quis vulputate. Vestibulum vitae massa ac lacus tempor elementum.',
+                    title: 'What is the cost of a product?',
+                    text: 'Every thing we buy comes with a cost. You might think the cost is the price you pay at the checkout till. But that is not the cost, that is the price - the value given to it based on what customers are willing to pay. The real cost of a product is what we, all of us, have lost to gain it. Producing and delivering goods and services has an environmental impact that we can and do know, including the carbon emissions that contribute to climate change. Our mission is simple - we want to know the cost before we buy. ',
                     image: 'img/home/coin-trick.jpg'
                 },
                 {
-                    title: 'section 2',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis commodo massa, vel pretium nulla viverra in. Vestibulum ornare luctus sem in rutrum. Proin vel orci in erat elementum mollis. Ut gravida aliquam sodales. Cras ut justo tellus. Donec lobortis in neque quis vulputate. Vestibulum vitae massa ac lacus tempor elementum.',
+                    title: 'A simple concept, a powerful change',
+                    text: 'The markets today prioritse delivering products to consumers as cheaply as possinlet the lowest prices and we consumers typically base our buying on these prices. But just as we also look at the calories possible but this is often at the expnse of our shared environment. We make ',
                     image: 'img/home/slow-down.jpg'
                 }
             ]
